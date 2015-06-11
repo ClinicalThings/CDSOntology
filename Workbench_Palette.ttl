@@ -1,0 +1,183 @@
+# baseURI: http://cognitivemedicalsystems.com
+# imports: http://www.w3.org/2004/02/skos/core
+
+@prefix cognitivemedicalsystems: <http://cognitivemedicalsystems.com#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://cognitivemedicalsystems.com>
+  rdf:type owl:Ontology ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+cognitivemedicalsystems:Alert
+  rdf:type owl:Class ;
+  rdfs:label "Alert"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:CommunicationRequest ;
+.
+cognitivemedicalsystems:BloodPressure
+  rdf:type owl:Class ;
+  rdfs:label "Blood pressure"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:VitalSigns ;
+.
+cognitivemedicalsystems:Chat
+  rdf:type owl:Class ;
+  rdfs:label "Chat"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:CommunicationRequest ;
+.
+cognitivemedicalsystems:Chemistry
+  rdf:type owl:Class ;
+  rdfs:label "Chemistry"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:LabResult ;
+.
+cognitivemedicalsystems:ClinicalObject
+  rdf:type owl:Class ;
+  rdfs:comment "Clinical objects or data"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+.
+cognitivemedicalsystems:Colonoscopy
+  rdf:type owl:Class ;
+  rdfs:label "Colonoscopy"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:Procedure ;
+.
+cognitivemedicalsystems:CommunicationRequest
+  rdf:type owl:Class ;
+  rdfs:label "Alert"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+.
+cognitivemedicalsystems:Complaint
+  rdf:type owl:Class ;
+  rdfs:label "Complaint"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:Condition ;
+  skos:definition "Patient reported complaint, not necessarily validated by provider"^^xsd:string ;
+.
+cognitivemedicalsystems:Concern
+  rdf:type owl:Class ;
+  rdfs:label "Concern"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:Condition ;
+  skos:definition "Need definition"^^xsd:string ;
+.
+cognitivemedicalsystems:Condition
+  rdf:type owl:Class ;
+  rdfs:label "Condition"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:ClinicalObject ;
+.
+cognitivemedicalsystems:Diagnosis
+  rdf:type owl:Class ;
+  rdfs:label "Diagnosis"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:Condition ;
+  skos:definition "Physician confirmed diagnosis, with code and code system pair"^^xsd:string ;
+.
+cognitivemedicalsystems:ElectroCardiogram
+  rdf:type owl:Class ;
+  rdfs:label "Electrocardiogram"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:Procedure ;
+.
+cognitivemedicalsystems:End
+  rdf:type owl:Class ;
+  rdfs:label "End"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:Event ;
+.
+cognitivemedicalsystems:Event
+  rdf:type owl:Class ;
+  rdfs:label "Event"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:ClinicalObject ;
+.
+cognitivemedicalsystems:Evidence
+  rdf:type owl:Class ;
+  rdfs:label "Evidence"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:InfoButton ;
+.
+cognitivemedicalsystems:Extends
+  rdf:type rdfs:Class ;
+  rdfs:label "Extends"^^xsd:string ;
+  rdfs:subClassOf owl:TransitiveProperty ;
+.
+cognitivemedicalsystems:Hematology
+  rdf:type owl:Class ;
+  rdfs:label "Hematology"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:LabResult ;
+.
+cognitivemedicalsystems:Immunization
+  rdf:type owl:Class ;
+  rdfs:subClassOf cognitivemedicalsystems:ClinicalObject ;
+.
+cognitivemedicalsystems:InfoButton
+  rdf:type owl:Class ;
+  rdfs:label "Reference"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+.
+cognitivemedicalsystems:LabResult
+  rdf:type owl:Class ;
+  rdfs:subClassOf cognitivemedicalsystems:ClinicalObject ;
+.
+cognitivemedicalsystems:Medication
+  rdf:type owl:Class ;
+  rdfs:comment "Simple unit dose medications for now."^^xsd:string ;
+  rdfs:label "Medication"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:ClinicalObject ;
+.
+cognitivemedicalsystems:Microbiology
+  rdf:type owl:Class ;
+  rdfs:label "Microbiology"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:LabResult ;
+.
+cognitivemedicalsystems:Order
+  rdf:type owl:Class ;
+  rdfs:label "Order"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:ClinicalObject ;
+.
+cognitivemedicalsystems:Page
+  rdf:type owl:Class ;
+  rdfs:label "Page"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:CommunicationRequest ;
+.
+cognitivemedicalsystems:Patient
+  rdf:type owl:Class ;
+  rdfs:label "Patient"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:ClinicalObject ;
+.
+cognitivemedicalsystems:PatientEducation
+  rdf:type owl:Class ;
+  rdfs:label "Info button"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:InfoButton ;
+.
+cognitivemedicalsystems:Prescription
+  rdf:type owl:Class ;
+  rdfs:label "Prescription"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:Order ;
+.
+cognitivemedicalsystems:Problem
+  rdf:type owl:Class ;
+  rdfs:label "Problem"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:Condition ;
+  skos:definition "Symptomatic complaint, validated by physician"^^xsd:string ;
+.
+cognitivemedicalsystems:Procedure
+  rdf:type owl:Class ;
+  rdfs:label "Procedure"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:ClinicalObject ;
+.
+cognitivemedicalsystems:Reference
+  rdf:type owl:Class ;
+  rdfs:label "Reference"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:InfoButton ;
+.
+cognitivemedicalsystems:SimpleMessageService
+  rdf:type owl:Class ;
+  rdfs:label "Simple message service"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:CommunicationRequest ;
+.
+cognitivemedicalsystems:Start
+  rdf:type owl:Class ;
+  rdfs:label "Start"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:Event ;
+.
+cognitivemedicalsystems:VitalSigns
+  rdf:type owl:Class ;
+  rdfs:label "Vital signs"^^xsd:string ;
+  rdfs:subClassOf cognitivemedicalsystems:ClinicalObject ;
+.
