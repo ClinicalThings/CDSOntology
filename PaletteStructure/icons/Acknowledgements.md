@@ -1,11 +1,12 @@
 # Icon Acknowledgements
 
+* Admission (1)
 * Chemistry Result (1)
 * Colonoscopy (2)
 * Culture Result (1)
 * Diagnosis (1)
 * Drug Allergy (1)
-* EKG (1)
+* EKG (2)
 * Encounter (1)
 * Heart Rate (2)
 * Hematology Result (1)
